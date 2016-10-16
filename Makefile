@@ -31,32 +31,12 @@ endif
 SRC_PREFIX = ./src/
 OBJ_PREFIX = ./obj/
 
-SRC		= memset bzero memcpy memccpy memmove memchr memcmp strdup strcpy strncpy \
-strcat strncat strlcat strchr strrchr strstr strnstr strcmp strncmp atoi \
-isalpha isdigit isalnum isascii isprint toupper tolower memalloc memdel strnew \
-strdel strclr striter striteri strmap strmapi strequ strnequ strsub strjoin strnjoin \
-strtrim strsplit itoa strlen putchar putstr putnbr putunbr putendl putchar_fd putstr_fd \
-putnbr_fd putendl_fd \
-lstnew lstdelone lstdel lstadd lstiter lstmap \
-lstsize lstgetat lstsort \
-isupper islower isspace \
-pow \
-dl_lstnew dl_lstfront dl_lstback dl_lstpushfront dl_lstclear \
-dl_lstpushback dl_lstpopfront dl_lstpopback dl_lstiter dl_lstmap dl_lstsize \
-queuenew queueback queuepush queuepop queuesize \
-stacknew stackpush stackpop stacksize \
-putaddr \
-itoa_base uitoa imaxtoa atoimax \
-strprepend strpbrk \
-strconcat strnconcat
+SRC	=	$(shell ls $(SRC_PREFIX)*.c)
 
 ifeq ($(BUILD), Debug)
 	SRC += debug_error_param debug_error_free
 endif
 
-
-SRC := $(addsuffix .c, $(SRC))
-SRC := $(addprefix $(SRC_PREFIX)ft_, $(SRC))
 
 OBJ = $(subst $(SRC_PREFIX), , $(SRC:.c=$(SUFFIX)))
 OBJ := $(addprefix $(OBJ_PREFIX), $(OBJ))
