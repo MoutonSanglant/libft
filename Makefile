@@ -34,7 +34,7 @@ OBJ_PREFIX = ./obj/
 SRC	=	$(shell ls $(SRC_PREFIX)*.c)
 
 ifeq ($(BUILD), Debug)
-	SRC += debug_error_param debug_error_free
+	SRC += $(shell ls $(SRC_PREFIX)debug/*.c)
 endif
 
 
@@ -56,6 +56,7 @@ $(NAME): $(OBJ)
 $(OBJ_PREFIX)%$(SUFFIX): $(SRC_PREFIX)%.c
 	@echo "making $@"
 	@mkdir -p $(OBJ_PREFIX)
+	@mkdir -p $(OBJ_PREFIX)debug/
 	@$(CC) -o $@ -c $< $(CFLAGS)
 
 clean:

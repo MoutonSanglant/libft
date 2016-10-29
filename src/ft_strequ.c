@@ -6,7 +6,7 @@
 /*   By: tdefresn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 12:34:17 by tdefresn          #+#    #+#             */
-/*   Updated: 2016/03/05 17:38:22 by tdefresn         ###   ########.fr       */
+/*   Updated: 2016/10/26 17:00:46 by tdefresn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_strequ(char const *s1, char const *s2)
 		ERROR_PARAM("ft_strequ");
 		return (0);
 	}
-	while (*s1 && *s2)
+	while (*s1 || *s2)
 	{
 		if (*s1 != *s2)
 			return (0);
@@ -35,7 +35,7 @@ int	ft_strequ(char const *s1, char const *s2)
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	while (*s1 && *s2)
+	while (*s1 || *s2)
 	{
 		if (*s1 != *s2)
 			return (0);

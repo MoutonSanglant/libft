@@ -6,11 +6,11 @@
 /*   By: tdefresn <tdefresn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/02 18:34:08 by tdefresn          #+#    #+#             */
-/*   Updated: 2016/10/11 10:25:03 by tdefresn         ###   ########.fr       */
+/*   Updated: 2016/10/28 20:05:07 by tdefresn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void			ft_debug_error_param(const char *fn_name)
 {
