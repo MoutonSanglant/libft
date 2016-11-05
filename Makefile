@@ -41,9 +41,13 @@ endif
 OBJ = $(subst $(SRC_PREFIX), , $(SRC:.c=$(SUFFIX)))
 OBJ := $(addprefix $(OBJ_PREFIX), $(OBJ))
 
-.PHONY: all clean fclean re debug bonus
+.PHONY: all re debug bonus clean fclean dclean
 
 all: $(NAME)
+
+test:
+	@echo hello;
+	@echo test;
 
 debug:
 	@$(MAKE) BUILD=Debug all
@@ -64,5 +68,8 @@ clean:
 
 fclean: clean
 	/bin/rm -f $(NAME)
+
+dclean: fclean
+	/bin/rm -rf $(OBJ_PREFIX)
 
 re: fclean all

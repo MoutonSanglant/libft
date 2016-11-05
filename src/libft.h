@@ -146,24 +146,16 @@ int				ft_islower(int c);
 **	OUTPUT
 */
 
-/*
-**	NOTE
-**	ft_putstr, ft_putnbr, ft_putunbr and ft_putaddr
-**	have been altered to return the size of the
-**	writte output
-*/
-
 void			ft_putchar(char c);
-int				ft_putstr(const char *s);
+void			ft_putstr(const char *s);
 void			ft_putendl(const char *s);
-int				ft_putnbr(int n);
+void			ft_putnbr(int n);
 void			ft_putchar_fd(char c, int fd);
-int				ft_putstr_fd(const char *s, int fd);
+void			ft_putstr_fd(const char *s, int fd);
 void			ft_putendl_fd(const char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 
-int				ft_putunbr(unsigned int n);
-int				ft_putaddr(const void *addr);
+void			ft_putaddr(const void *addr);
 
 
 /*

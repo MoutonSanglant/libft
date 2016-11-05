@@ -6,7 +6,7 @@
 /*   By: tdefresn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 12:34:31 by tdefresn          #+#    #+#             */
-/*   Updated: 2016/03/05 23:56:01 by tdefresn         ###   ########.fr       */
+/*   Updated: 2016/11/04 15:19:31 by tdefresn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #ifdef DEBUG
 
-size_t	cat(char *dst, char const *src, size_t size)
+static size_t	cat(char *dst, char const *src, size_t size)
 {
 	char	*ptr;
 	size_t	total_size;
@@ -43,7 +43,7 @@ size_t	cat(char *dst, char const *src, size_t size)
 	return (total_size);
 }
 
-size_t	ft_strlcat(char *dst, char const *src, size_t size)
+size_t			ft_strlcat(char *dst, char const *src, size_t size)
 {
 	if (!dst || !src)
 	{
