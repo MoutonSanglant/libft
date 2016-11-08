@@ -6,7 +6,7 @@
 /*   By: tdefresn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 12:34:31 by tdefresn          #+#    #+#             */
-/*   Updated: 2016/11/04 15:19:31 by tdefresn         ###   ########.fr       */
+/*   Updated: 2016/11/08 16:25:58 by tdefresn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ size_t			ft_strlcat(char *dst, char const *src, size_t size)
 
 #else
 
-size_t	ft_strlcat(char *dst, char const *src, size_t size)
+size_t			ft_strlcat(char *dst, char const *src, size_t size)
 {
 	char	*ptr;
 	size_t	total_size;
