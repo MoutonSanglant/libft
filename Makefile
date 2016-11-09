@@ -6,6 +6,8 @@ LDLIBS	=
 SUFFIX	= .o
 NAME	= libft.a
 
+CORR_FILES = ./Makefile ./src
+
 # DEBUG routine
 ifeq ($(BUILD), Debug)
 	CFLAGS	+= -fsanitize=address -g -O0 -D DEBUG
@@ -41,7 +43,7 @@ endif
 OBJ = $(subst $(SRC_PREFIX), , $(SRC:.c=$(SUFFIX)))
 OBJ := $(addprefix $(OBJ_PREFIX), $(OBJ))
 
-.PHONY: all re debug bonus clean fclean dclean
+.PHONY: all re debug bonus clean fclean dclean correction
 
 all: $(NAME)
 
@@ -73,3 +75,8 @@ dclean: fclean
 	/bin/rm -rf $(OBJ_PREFIX)
 
 re: fclean all
+
+correction_%:
+	@echo "\033[32mCopying libft into \033[33m/tmp/$*\033[0m"
+	@mkdir -p /tmp/$*/libft
+	@rsync -r --copy-links $(CORR_FILES) /tmp/$*/libft
