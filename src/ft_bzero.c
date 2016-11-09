@@ -6,11 +6,11 @@
 /*   By: tdefresn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 12:38:20 by tdefresn          #+#    #+#             */
-/*   Updated: 2016/11/09 00:40:57 by tdefresn         ###   ########.fr       */
+/*   Updated: 2016/11/09 13:03:29 by tdefresn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftprintf.h"
+#include <unistd.h>
 
 void	ft_bzero(void *s, size_t n)
 {
