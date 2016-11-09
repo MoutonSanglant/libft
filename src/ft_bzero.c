@@ -6,28 +6,17 @@
 /*   By: tdefresn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 12:38:20 by tdefresn          #+#    #+#             */
-/*   Updated: 2016/03/05 23:43:55 by tdefresn         ###   ########.fr       */
+/*   Updated: 2016/11/09 00:40:57 by tdefresn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-#ifdef DEBUG
+#include "ftprintf.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	if (!s)
-	{
-		ERROR_PARAM("ft_bzero");
-		return ;
-	}
-	ft_memset(s, '\0', n);
-}
+	unsigned char	*ptr;
 
-#else
-
-void	ft_bzero(void *s, size_t n)
-{
-	ft_memset(s, '\0', n);
+	ptr = s;
+	while (n--)
+		*ptr++ = 0;
 }
-#endif

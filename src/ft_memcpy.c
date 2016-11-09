@@ -6,7 +6,7 @@
 /*   By: tdefresn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 12:37:22 by tdefresn          #+#    #+#             */
-/*   Updated: 2016/03/05 19:58:28 by tdefresn         ###   ########.fr       */
+/*   Updated: 2016/11/09 01:03:14 by tdefresn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,34 +16,30 @@
 
 void	*ft_memcpy(void *dst, void const *src, size_t n)
 {
-	size_t	i;
+	char		*p_dst;
+	const char	*p_src;
 
 	if (!dst || !src)
 	{
 		ERROR_PARAM("ft_memcpy");
 		return (NULL);
 	}
-	i = 0;
-	while (i < n)
-	{
-		((char *)dst)[i] = ((char *)src)[i];
-		i++;
-	}
-	return (dst);
+	p_dst = dst;
+	p_src = src;
+	while (n--)
+		*p_dst++ = *p_src++;
 }
 
 #else
 
 void	*ft_memcpy(void *dst, void const *src, size_t n)
 {
-	size_t	i;
+	char		*p_dst;
+	const char	*p_src;
 
-	i = 0;
-	while (i < n)
-	{
-		((char *)dst)[i] = ((char *)src)[i];
-		i++;
-	}
-	return (dst);
+	p_dst = dst;
+	p_src = src;
+	while (n--)
+		*p_dst++ = *p_src++;
 }
 #endif
